@@ -14,6 +14,7 @@ import {
 import BigNumber from "bignumber.js";
 import { lamports } from "@metaplex-foundation/umi";
 
+
 export const useSolTip = () => {
 	const [avatar, setAvatar] = useState("")
 	const [userAddress, setUserAddress] = useState("11111111111111111111111111111111")
@@ -27,22 +28,23 @@ export const useSolTip = () => {
 
 	// Local storage setup
 	const useLocalStorage = (storageKey, fallbackState) => {
-		const [value, setValue] = useState(() => {
+    const [value, setValue] = useState(() => {
 			if (typeof window !== 'undefined') {
 				const storedValue = localStorage.getItem(storageKey);
 				return storedValue ? JSON.parse(storedValue) : fallbackState;
 			}
 			return fallbackState;
-		});
+    });
 
-		useEffect(() => {
+    useEffect(() => {
 			if (typeof window !== 'undefined') {
 				localStorage.setItem(storageKey, JSON.stringify(value));
 			}
-		}, [storageKey, value]);
+    }, [storageKey, value]);
 
-		return [value, setValue];
+    return [value, setValue];
 	}
+
 
 	const [transactions, setTransactions] = useLocalStorage("transactions", [])
 	
@@ -65,8 +67,8 @@ export const useSolTip = () => {
 		const { blockhash } = await connection.getLatestBlockhash('finalized')
 
 		const transaction = new Transaction({
-				recentBlockhash: blockhash,
-				feePayer: fromWallet
+			recentBlockhash: blockhash,
+			feePayer: fromWallet
 		})
 
 		// Transfer instruction - from sender to receiver
@@ -100,30 +102,6 @@ export const useSolTip = () => {
 		console.log(txHash);
 
 		//transaction history object
-		// const newTransaction = {
-		// 	id: transactions.length.toString(),
-		// 	from: {
-		// 		name: publicKey,
-		// 		handle: publicKey,
-		// 		avatar: avatar,
-		// 		verified: true,
-		// 	},
-		// 	to: {
-		// 		name: receiver,
-		// 		handle: '-',
-		// 		avatar: getAvatarUrl(receiver.toString()),
-		// 		verified: false,
-		// 	},
-		// 	description: transactionPurpose,
-		// 	transactionDate: new Date(),
-		// 	status: 'Completed',
-		// 	amount: amount,
-		// 	source: '-',
-		// 	identifier: '-',
-		// };
-		// setNewTransactionModalOpen(false)
-		// setTransactions(prevTransactions => [newTransaction, ...prevTransactions]);
-
 		const newID = (transactions.length + 1).toString()
 		const newTransaction = {
 			id: newID,
