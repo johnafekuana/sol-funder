@@ -1,4 +1,4 @@
-/**
+/** 
  * Serialize class names
  * @param  {...string} classes A list of class names
  * @returns {string} Serialized class names.
