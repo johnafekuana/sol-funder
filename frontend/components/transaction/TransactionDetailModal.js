@@ -20,7 +20,7 @@ const TransactionDetailModal = ({ currentTransaction, modalOpen, setModalOpen })
                         to: currentTransaction?.to.name,
                         from: currentTransaction?.from.name,
                     }}
-                />
+                /> 
 
                 <TransactionFooter />
             </div>
