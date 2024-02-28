@@ -10,7 +10,7 @@ input::-webkit-inner-spin-button {
 
 .phantom-button {
     height: inherit !important;
-    padding: inherit !important;
+    padding: inherit !important; 
 }
 
 .phantom-button:hover {
