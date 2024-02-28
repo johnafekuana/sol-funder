@@ -20,7 +20,7 @@ const Modal = ({ modalOpen, setModalOpen, children }) => {
                     </div>
                 </div>
             </Dialog>
-        </Transition>
+        </Transition> 
     )
 }
 
