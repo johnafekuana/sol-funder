@@ -7,3 +7,4 @@ export const truncate = (longString, limit = 10) => {
 
     return longString
 }
+ 
