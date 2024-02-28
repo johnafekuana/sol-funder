@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { getAvatarUrl } from "../functions/getAvatarUrl";
-import { WalletAdapterNetwork } from "@solana/wallet-adapter-base";
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { 
 	clusterApiUrl, 
@@ -12,7 +11,6 @@ import {
 	Transaction 
 } from "@solana/web3.js";
 import BigNumber from "bignumber.js";
-import { lamports } from "@metaplex-foundation/umi";
 
 
 export const useSolTip = () => {
