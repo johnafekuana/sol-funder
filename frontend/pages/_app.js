@@ -15,8 +15,7 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 			<WalletConnectionProvider>
 				<Component {...pageProps} />
-			</WalletConnectionProvider>
-				
+			</WalletConnectionProvider>	
 		</>
 	)
 }
