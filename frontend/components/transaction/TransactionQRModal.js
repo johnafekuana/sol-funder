@@ -118,7 +118,7 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, setQrCode })
                 <div className="flex flex-col items-center justify-center space-y-1">
                     <p className="text-lg font-medium text-gray-800">{truncate(userAddress)}</p>
 
-                    <p className="text-sm font-light text-gray-600">Scan to pay ${truncate(userAddress)}</p>
+                    <p className="text-sm font-light text-gray-600">Input amount and Scan to pay ${truncate(userAddress)}</p>
 
                     <input
                         type="number"
