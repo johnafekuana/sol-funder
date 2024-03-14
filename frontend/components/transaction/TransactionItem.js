@@ -12,8 +12,8 @@ const TransactionItem = ({ id, to, description, transactionDate, amount, toggleT
                 <p className="truncate text-sm text-gray-800">{to.name}</p>
             </div>
 
-            <p className="col-span-4 text-sm text-gray-400">{description}</p>
-            <p className="col-span-1 text-sm text-gray-400">{format(new Date(transactionDate), 'MMM d')}</p>
+            <p className="col-span-4 text-sm text-gray-800">{description}</p>
+            <p className="col-span-1 text-sm text-gray-800">{format(new Date(transactionDate), 'MMM d')}</p>
             <p className="col-span-1 text-right text-sm font-medium text-gray-800">{amount} SOL</p>
         </div> 
     )
