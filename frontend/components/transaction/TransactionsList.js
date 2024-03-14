@@ -25,7 +25,7 @@ const TransactionsList = ({ transactions }) => {
 					>Recent Transactions <span className="ml-2"><img src={dropdownIcon} alt="Icon" className="w-5 h-5 animate-bounce" style={{ filter: 'invert(1)' }} /></span>
 				</p>
 			</div>
-			<div className="mx-auto max-w-3xl divide-y divide-gray-100 py-4 px-10 xl:px-0">
+			<div className="mx-auto max-w-3xl divide-y divide-gray-100 py-4 px-10 xl:px-0 bg-gray-100 animate-pulse-bg mt-2 rounded-lg">
 				{transactions.map(({ id, to, amount, description, transactionDate }) => (
 					<TransactionItem key={id} id={id} to={to} description={description} transactionDate={transactionDate} amount={amount} toggleTransactionDetailModal={toggleTransactionDetailModal} />
 				))}
