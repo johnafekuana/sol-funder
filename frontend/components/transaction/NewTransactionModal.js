@@ -37,17 +37,17 @@ const NewTransactionModal = ({ modalOpen, setModalOpen }) => {
 
 						<div className="flex w-full flex-col space-y-2">
 							<div className="animate-pulse flex rounded-lg border border-gray-200 p-4">
-								<label className="text-gray-300" htmlFor="receiver">
+								<label className="text-gray-600" htmlFor="receiver">
 										To:
 								</label>
-								<input className="w-full pl-2 font-medium text-gray-600 placeholder-gray-300 outline-none" id="receiver" name="receiver" type="text" placeholder="Recipient's Address" value={receiver} onChange={(e) => setReceiver(e.target.value)} />
+								<input className="w-full pl-2 font-medium text-gray-600 placeholder-gray-600 outline-none" id="receiver" name="receiver" type="text" placeholder="Recipient's Address" value={receiver} onChange={(e) => setReceiver(e.target.value)} />
 							</div>
 
 							<div className="animate-pulse flex rounded-lg border border-gray-200 p-4">
-								<label className="text-gray-300" htmlFor="transactionPurpose">
+								<label className="text-gray-600" htmlFor="transactionPurpose">
 									Purpose:
 								</label>
-								<input className="w-full pl-2 font-medium text-gray-600 placeholder-gray-300 outline-none" id="transactionPurpose" name="transactionPurpose" type="text" placeholder="Tip, Rent, etc." value={transactionPurpose} onChange={(e) => setTransactionPurpose(e.target.value)} />
+								<input className="w-full pl-2 font-medium text-gray-600 placeholder-gray-600 outline-none" id="transactionPurpose" name="transactionPurpose" type="text" placeholder="Tip, Rent, etc." value={transactionPurpose} onChange={(e) => setTransactionPurpose(e.target.value)} />
 							</div>
 						</div>
 
