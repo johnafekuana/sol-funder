@@ -15,7 +15,7 @@ Secure and Private At SolFunder, security comes first. Modern encryption and sec
 ## How It Works
 Getting started with SolFunder is easy:
 
-Sign up for an account and create your fundraising campaign. Customize your campaign with details about your project or cause. Share your campaign with your network and beyond. Monitor your campaign's progress and engage with your supporters. Withdraw your funds once your fundraising goal is reached.
+Sign up for an account and create your fundraising campaign(customized profile). Customize your campaign/profile with details about your project or cause. Share your campaign/profile with your network and beyond. Monitor your campaign's progress and engage with your supporters. Withdraw your funds once your fundraising goal is reached.
 
 ## Join Us
 Whether you're a developer, designer, or passionate supporter, there are many ways to get involved with SolFunder. Join our community, contribute to our platform, and help us shape the future of crowdfunding with cryptocurrency.
