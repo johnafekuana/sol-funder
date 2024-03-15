@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 			<Head>
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-				<title>Sol Tip</title>
+				<title>Sol-Funder</title>
 			</Head>
 			<WalletConnectionProvider>
 				<Component {...pageProps} />
