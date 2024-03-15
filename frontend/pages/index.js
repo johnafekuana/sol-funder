@@ -30,7 +30,7 @@ const {
 return (
 	<div className="flex min-h-screen ">
 		<main className="flex flex-1 flex-col">
-			<h1 className='text-center font-bold text-xl font-poppins m-2 text-[#7ac1e0]'>SOL TIP</h1>
+			<h1 className='text-center font-bold text-xl font-poppins m-2 text-[#7ac1e0]'>SOL-FUNDER</h1>
 			<SearchBar />
 			<TransactionsList connected={connected} transactions={transactions} />
 		</main>
