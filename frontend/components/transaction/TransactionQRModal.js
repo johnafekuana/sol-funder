@@ -14,7 +14,7 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, setQrCode })
     const qrRef = useRef()
     const connection = useConnection()
 
-    const [amountValue, setAmountValue] = useState("0.0"); // State variable for the amount value
+    const [amountValue, setAmountValue] = useState("0.0");
 
     // Set the state to true to rerender the component with generated QR
     const loadQr = () => {
@@ -22,8 +22,8 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, setQrCode })
     }
 
     useEffect(() => {
-        const recipient = new PublicKey(userAddress)
-        const amount = new BigNumber(amountValue) // Use amountValue from state
+        const recipient = new PublicKey(userAddress) //--work on changing the user address to the address associated with the user searched on the search bar
+        const amount = new BigNumber(amountValue)
         const reference = Keypair.generate().publicKey
         const label = "My nice cookies"
         const message = "Thank you for sending!"
@@ -36,7 +36,7 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, setQrCode })
             message
         }
         const url = encodeURL(urlParams)
-        const qr = createQR(url, 400, 'white', '#7ac1e0')
+        const qr = createQR(url, 400, 'white', '#2563EB')
 
         if (qrRef.current) {
             qrRef.current.innerHTML = ''
@@ -101,9 +101,8 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, setQrCode })
         }, 500)
 
         return () => clearInterval(interval)
-    }, [amountValue]) // Add amountValue to the dependency array
+    }, [amountValue]) // add amountValue to the dependency array
 
-    // Function to handle amount change
     const handleAmountChange = (event) => {
         setAmountValue(event.target.value);
     };
@@ -123,14 +122,14 @@ const TransactionQRModal = ({ modalOpen, setModalOpen, userAddress, setQrCode })
                     <input
                         type="number"
                         value={amountValue}
-                        onChange={handleAmountChange} // Call handleAmountChange on input change
+                        onChange={handleAmountChange}
                         className="w-full rounded-lg bg-white py-3 outline-none text-center"
                         placeholder="Enter amount"
                     />
 
-                    <button onClick={() => loadQr()} className="w-full rounded-lg bg-[#7ac1e0] py-3 hover:bg-opacity-70 outline-none">
-                        <span className="font-medium text-white">Load QR code</span>
-                    </button>
+                    {/* <button onClick={() => loadQr()} className="w-full rounded-lg bg-[#2563EB] py-3 hover:bg-opacity-70 outline-none">
+                        <span className="font-medium text-[#fff]">Load QR code</span>
+                    </button> */}
                 </div>
             </div>
         </Modal>
