@@ -5,8 +5,8 @@ const Action = ({ setModalOpen }) => {
 
     return (
         <div>
-            <button onClick={onNewTransaction} className="w-full rounded-lg bg-[#7ac1e0] py-3 hover:bg-opacity-70">
-                <span className="font-medium text-white">Send</span>
+            <button onClick={onNewTransaction} className="w-full rounded-lg bg-[#fff] py-3 hover:bg-opacity-90">
+                <span className="font-medium text-[#2563EB]">Send</span>
             </button>
         </div>
     )
