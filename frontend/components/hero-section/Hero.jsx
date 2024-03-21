@@ -64,7 +64,7 @@ const Hero = () => {
                   <input className='border w-1/3 py-2 rounded-full bg-blue-800 text-white font-semibold' type="submit" value="Subscribe" />
                 </form>
               </div>
-              <p className='agreement--text mt-4'>By clicking "Subscribe", I agree to the
+              <p className='agreement--text mt-4'>By clicking Subscribe, I agree to the
                 <Link href='' className='text-blue-600 font-bold'> Independent Contractor Agreement</Link> and have read the
                 <Link href='' className='text-blue-600 font-bold'> terms and conditions.</Link>
               </p>
