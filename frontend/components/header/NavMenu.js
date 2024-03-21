@@ -26,14 +26,14 @@ const NavMenu = ({ connected, publicKey }) => {
 
 	return (
 		<nav className="flex flex-1 items-center justify-center">
-			<ul className="flex flex-col space-y-10">
+			<ul className="flex flex-col space-y-10 items-center">
 
-				<li>
+				<li className=''>
 					<WalletMultiButton 
 						className='phantom-button' 
 						startIcon={<UserCircleIcon style={{height:24, width:24, color:'#7ac1e0'}}/>}>
 						<span className='text-sm font-semibold text-[#7ac1e0]'>
-							{connected? truncate(publicKey.toString()) : "Connect Wallet"}
+							{connected? truncate(publicKey.toString()) : "Connect"}
 						</span>
 					</WalletMultiButton>
 				</li>
